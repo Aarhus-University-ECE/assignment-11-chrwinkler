@@ -8,32 +8,36 @@ extern "C"
 #include "fib.h"
 }
 
-
 // See Catch2's documentation: https://github.com/catchorg/Catch2/blob/devel/docs/tutorial.md#scaling-up
 
 TEST_CASE("sumtail")
 {
-    // Add the tests for excercise 3 "sumtail" function here. Use "REQUIRE()" statement to check. 
-    REQUIRE(1==0);
+    // Add the tests for excercise 3 "sumtail" function here. Use "REQUIRE()" statement to check.
+    REQUIRE(sumtail(5, 0) == 15);
+    REQUIRE(sumtail(6, 0) == 21);
+    REQUIRE(sumtail(7, 0) == 28);
 }
 
 TEST_CASE("sumwhile")
 {
-    // Add the tests for excercise 3 "sumwhile" function here. Use "REQUIRE()" statement to check. 
-    REQUIRE(1==0);
+    // Add the tests for excercise 3 "sumwhile" function here. Use "REQUIRE()" statement to check.
+    REQUIRE(sumwhile(5) == 15);
+    REQUIRE(sumwhile(6) == 21);
+    REQUIRE(sumwhile(7) == 28);
 }
 
 TEST_CASE("sumn")
 {
-    REQUIRE(sumn(1)==1); // sum(1) must be 1
-    REQUIRE(sumn(3)==9); //sum(3) = 1+3+5 = 9
-    REQUIRE(sumn(33)==1089); //sum(33) = 1+3+5+...+65 = 1089
+    REQUIRE(sumn(1) == 1);     // sum(1) must be 1
+    REQUIRE(sumn(3) == 9);     // sum(3) = 1+3+5 = 9
+    REQUIRE(sumn(33) == 1089); // sum(33) = 1+3+5+...+65 = 1089
 }
 
 TEST_CASE("fib")
 {
-   // Add the tests for excercise 4 "fib" function here. Use "REQUIRE()" statement to check. 
-    REQUIRE(1==0);
+    // Add the tests for excercise 4 "fib" function here. Use "REQUIRE()" statement to check.
+    REQUIRE(fib(5, 0, 1) == 5);
+    REQUIRE(fib(6, 0, 1) == 8);
+    REQUIRE(fib(20, 0, 1) == 6765);
+    REQUIRE(fib(1, 0, 1) == 1);
 }
-
-

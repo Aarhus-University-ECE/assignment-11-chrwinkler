@@ -11,15 +11,15 @@ int fib(int n, int p, int pp)
 {
     {
         /* pre-condition */
-        assert(n >= 1);
-        /* post-condition */
-        if (n == 1)
-            return 1;
-        else if (n == 2)
-            return 1;
-        else
+        assert(n > 0);
 
-            return fib(n - 1, p, pp) + fib(n - 2, );
+        /* post-condition */
+        if (n == 0)
+            return p;
+        else if (n == 1)
+            return pp;
+        else
+            return fib(n - 1, pp, p + pp);
     }
 
     return 0;

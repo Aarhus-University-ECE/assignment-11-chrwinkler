@@ -6,11 +6,11 @@
 int sumn(int n)
 {
     // Pre-condition
-    assert(n >= 1);
+    assert(n > 0);
 
     // Post-condtion
-    if (n >= 1)
-        return (2 * n - 1) * sumn(n - 1);
+    if (n > 1)
+        return (2 * n - 1) + sumn(n - 1);
     else
         return 1;
 }

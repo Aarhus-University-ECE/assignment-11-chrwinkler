@@ -19,21 +19,26 @@ int sum(int n)
 int sumtail(int n, int total)
 {
   /* pre-condition */
-  assert(n > 1);
+  assert(n > 0);
   /* post-condition */
   if (n == 1)
     return 1 + total;
   else
     // Tail recursion
-    return sumtail(n - 1, 1 + total);
+    return sumtail(n - 1, n + total);
 }
 
 /* Sum integers 1 to n */
 int sumwhile(int n)
 {
-  while (n > 1)
+  assert(n > 0);
+
+  int sum = 0;
+
+  while (n >= 1)
   {
-    return n + sumwhile(n - 1);
+    sum += n;
+    n--;
   }
-  return 1;
+  return sum;
 }
